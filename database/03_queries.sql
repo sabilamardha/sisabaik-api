@@ -20,6 +20,7 @@ SELECT id, nama, kategori, stok
 FROM penawaran
 WHERE nama ILIKE '%roti%'
 ORDER BY nama;
+
 -- 3. JOIN detail pesanan lengkap.
 SELECT
 ps.id AS pesanan_id,
