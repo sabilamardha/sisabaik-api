@@ -1,14 +1,33 @@
-# SisaBaik API
+# SisaBaik — Platform Penyelamatan Makanan Sisa
 
-SisaBaik API adalah layanan REST API backend berbasis Node.js, Express, dan PostgreSQL yang dirancang untuk mengelola penawaran makanan sisa serta memproses transaksi pemesanan secara aman dari *race condition* (konkurensi stok).
+SisaBaik adalah platform berbasis web *full-stack* yang menghubungkan usaha penyedia makanan yang memiliki stok berlebih yang masih layak konsumsi dengan konsumen yang membutuhkan[cite: 1, 12]. Platform ini bertujuan mengurangi sampah makanan (*food waste*) sekaligus memulihkan nilai ekonomi stok usaha[cite: 1, 33].
+
+---
+
+## Architecture & Tech Stack
+
+- **Frontend**: Vue 3 (Composition API `<script setup>`), Vite, Tailwind CSS / Custom CSS Token, SVG Assets[cite: 1, 3, 4, 34]
+- **Backend**: Node.js, Express.js REST API
+- **Database**: PostgreSQL[cite: 3, 8]
+- **Authentikasi & Otentikasi**: JWT (JSON Web Token), Role-Based Access Control (RBAC)[cite: 3, 9]
+
+---
 
 ## Persyaratan Sistem
 
-- **Node.js**: v20+
+- **Node.js**: `^22.18.0` atau `>=24.12.0`[cite: 9, 10]
+- **npm**: v10+
 - **PostgreSQL**: v16+
+- **Git**: Versi terbaru
 
-## Instalasi & Konfigurasi
+---
 
-1. **Salin berkas variabel lingkungan:**
+## Panduan Instalasi & Pengoperasian
+
+Repositori ini menggunakan struktur *monorepo* sederhana di mana Backend berada di folder utama (*root*) dan Frontend berada di dalam subfolder `frontend/`[cite: 8, 9, 10].
+
+### 1. Pengaturan Backend (REST API)
+
+1. **Masuk ke root repositori:**
    ```bash
-   cp .env.example .env
+   cd sisabaik-api
